@@ -197,7 +197,7 @@ if (project.hasProperty("coverage")) {
 }
 
 accurest {
-    baseClassForTests = 'pl.devoxx.prezentatr.present.BaseMvcSpec'
+    baseClassForTests = 'pl.codepot.prezentatr.present.BaseMvcSpec'
     basePackageForTests = 'accurest'
     contractsDslDir = contractsDir
     generatedTestSourcesDir = file("${project.buildDir}/generated-sources/accurest")

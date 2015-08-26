@@ -1,10 +1,7 @@
 {
-    "pl": {
-        "this": "pl/devoxx/prezentatr",
+    "red": {
+        "this": "pl/codepot/prezentatr",
         "dependencies": {
-            "aggregatr": {
-                "path": "pl/devoxx/aggregatr"
-            }
         }
     }
 }
