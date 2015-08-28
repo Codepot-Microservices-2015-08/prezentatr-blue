@@ -20,15 +20,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST
 @Api(value = "present", description = "API for GUI")
 class PresentController {
 
-    private ServiceRestClient restClient
-    private final Random random
-
-
-    @Autowired
-    public PresentController() {
-        this.random = new Random()
-    }
-
     @RequestMapping(
             value = "/order",
             method = POST,
