@@ -8,7 +8,7 @@ class BaseMvcSpec extends Specification {
 
     def setup() {
         setupMocks()
-        RestAssuredMockMvc.standaloneSetup(new FeedController())
+        RestAssuredMockMvc.standaloneSetup(new PresentController(), new FeedController())
     }
 
     void setupMocks() {
