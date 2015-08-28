@@ -1,6 +1,1 @@
-stubrunner:
-  #skip-local-repo: false
-  #work-offline: true
-  use-microservice-definitions: true
-  stubs:
-    repository.root: "http://52.16.215.68:8081/nexus/content/repositories/releases/"
+metrics.path.app: prezentatr-blue
