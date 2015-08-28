@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpEntity
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.RequestMapping
+import pl.codepot.prezentatr.config.Versions
 import pl.codepot.prezentatr.state.State
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET
@@ -30,9 +31,11 @@ class PresentService {
     private ServiceRestClient serviceRestClient;
 
     public String order(HttpEntity<String> body) {
+
         return serviceRestClient.forService("aggregatr")
                 .post()
-                .onUrl("ingredients").httpEntity(body)
+                .onUrl("/ingredients").body(body.body)
+                .withHeaders().contentType(Versions.AGREGATR_CONTENT_TYPE_V1)
                 .andExecuteFor()
                 .anObject()
                 .ofType(String.class)
