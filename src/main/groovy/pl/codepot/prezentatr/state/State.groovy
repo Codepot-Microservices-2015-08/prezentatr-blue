@@ -15,4 +15,13 @@ class State {
         this.bottles = 0
     }
 
+
+    @Override
+    public String toString() {
+        return "State{" +
+                "brewing=" + brewing +
+                ", bottling=" + bottling +
+                ", bottles=" + bottles +
+                '}';
+    }
 }
