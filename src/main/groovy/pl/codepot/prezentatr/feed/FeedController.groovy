@@ -3,10 +3,12 @@ package pl.codepot.prezentatr.feed
 import com.wordnik.swagger.annotations.Api
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import pl.codepot.prezentatr.state.State
 
 import static org.springframework.web.bind.annotation.RequestMethod.PUT
 
@@ -23,12 +25,23 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT
 class FeedController {
 
 
+    final State state
+
+    @Autowired
+    FeedController(State state) {
+        this.state = state
+    }
+
     @RequestMapping(value = "/dojrzewatr", method = PUT)
     public void dojrzewatr() {
+        String cId = "aaa"
+        state.brewing.add(cId)
     }
 
     @RequestMapping(value = "/butelkatr", method = PUT)
     public void butelkatr() {
+        String cId = "aaa"
+        state.brewing.re(cId)
     }
 
     @RequestMapping(value = "/bottles/{quantity}", method = PUT)
