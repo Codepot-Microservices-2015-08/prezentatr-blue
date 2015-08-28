@@ -1,11 +1,9 @@
 package pl.codepot.prezentatr.present
 
-import com.ofg.infrastructure.web.resttemplate.fluent.ServiceRestClient
 import com.wordnik.swagger.annotations.Api
 import com.wordnik.swagger.annotations.ApiOperation
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpEntity
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
