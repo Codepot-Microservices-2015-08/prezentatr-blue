@@ -37,6 +37,8 @@ class PresentController {
 
     @RequestMapping(value = "/dojrzewatr", method = GET)
     public String dojrzewatr() {
+        log.trace "dojrzewatr() invoke"
+        log.info "dojrzewatr 0"
         "0"
     }
 
